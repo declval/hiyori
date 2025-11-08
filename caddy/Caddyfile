@@ -1,0 +1,16 @@
+{
+	admin off
+	default_sni DOMAIN
+}
+
+DOMAIN {
+	root /srv
+
+	reverse_proxy /xhttp/* xray:8000
+
+	file_server
+
+	log {
+		output stdout
+	}
+}

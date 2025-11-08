@@ -1,0 +1,43 @@
+{
+    "inbounds": [
+        {
+            "listen": "127.0.0.1",
+            "port": 8000,
+            "protocol": "vmess",
+            "settings": {
+                "clients": []
+            },
+            "streamSettings": {
+                "network": "xhttp",
+                "xhttpSettings": {
+                    "path": "/xhttp"
+                }
+            }
+        }
+    ],
+    "log": {
+        "loglevel": "info"
+    },
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "tag": "direct"
+        }
+    ],
+    "policy": {
+        "levels": {
+            "0": {
+                "statsUserDownlink": true,
+                "statsUserOnline": true,
+                "statsUserUplink": true
+            }
+        },
+        "system": {
+            "statsInboundDownlink": true,
+            "statsInboundUplink": true,
+            "statsOutboundDownlink": true,
+            "statsOutboundUplink": true
+        }
+    },
+    "stats": {}
+}
